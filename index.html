@@ -8,6 +8,7 @@
     <input type="text" id="search-box" />
     <div id="hits-container"></div>
     <div id="pagination-container"></div>
+    <div id="stats-container"
 
     <script src="https://cdn.jsdelivr.net/instantsearch.js/1/instantsearch.min.js"></script>
     <script>
@@ -16,12 +17,14 @@
         apiKey: 'b74d8a9d74609a45a218354901ff59f9',
         indexName: 'bestbuy'
       });
+
       search.addWidget(
         instantsearch.widgets.searchBox({
           container: '#search-box',
           placeholder: 'Search for products...'
         })
       );
+
       search.addWidget(
         instantsearch.widgets.hits({
           container: '#hits-container',
@@ -30,17 +33,19 @@
           }
         })
       );
+
       search.addWidget(
         instantsearch.widgets.pagination({
           container: '#pagination-container'
         })
       );
+
       search.addWidget(
         instantsearch.widgets.stats({
           container: '#stats-container'
         })
       );
-      
+
       search.start();
     </script>
   </body>
